@@ -1,5 +1,5 @@
 ---
-
+import Card from "../components/Card.astro";
 ---
 
 <html lang="en">
@@ -12,37 +12,27 @@
   </head>
   <header></header>
   <body>
-    <h1>EVENTS IN COPENHAGEN</h1>
+    <section>
+      <h1>EVENTS IN COPENHAGEN</h1>
+      <div class="grid_1-2">
+        <Card variant="featured" img="video.mp4" tag="LOCAL CRTV - " text="WHAT CAN'T I MISS IN COPENHAGEN AS A FIRST-TIMER?" />
+      </div>
+      <div class="flex_one_column">
+        <Card img="/christiania.webp" tag="LOCAL CRTV -" text="Discover Copenhagen's free town - colorful, creative, unforgettable." link="/tourguide" />
+        <Card img="/BMO.webp" tag="LOCAL CRTV -" text="Taste, space and the joy of being together in copenhagen" link="/tourguide" />
+        <Card img="/dak.webp" tag="LOCAL CRTV -" text="DAC: Where buildings and design tell their stories" link="/tourguide" />
+      </div>
+    </section>
 
-    <video src="/video.mp4" autoplay muted loop playsinline></video>
-
-    <h2>WHAT CAN'T I MISS IN COPENHAGEN AS A FIRST-TIMER?</h2>
-
-    <img src="/christiania.webp" alt="christiania" />
-
-    <p>LOCAL CRTV - Discover Copenhagen's free town - colorful, creative, unforgettable.</p>
-
-    <img src="/BMO.webp" alt="BMO" />
-
-    <p>LOCAL CRTV - Taste, space and the joy of being together in copenhagen</p>
-
-    <img src="/dak.webp" alt="dak" />
-
-    <p>LOCAL CRTV - DAC: Where buildings and design tell their stories</p>
-
-    <p>FEATURED ARTICLES</p>
-
-    <h3>UNMISSABLE THINGS TO DO IN COPENHAGEN</h3>
-
-    <img src="/autopol.webp" alt="autopol" />
-
-    <p>LOCAL CRTV - AUTOPOL - outside bar in Nordvest</p>
-
-    <img src="/ungdom.webp" alt="ungdom" />
-
-    <p>LOCAL CRTV - Visit “Ungdomsøen” - an island full og creativity</p>
-
-    <img src="/smk.webp" alt="smk" />
+    <section>
+      <p>FEATURED ARTICLES</p>
+      <h3>UNMISSABLE THINGS TO DO IN COPENHAGEN</h3>
+      <div class="grid_3_1f">
+        <Card img="/autopol.webp" tag="LOCAL CRTV - " text="AUTOPOL - outside bar in Nordvest" />
+        <Card img="/ungdom.webp" tag="LOCAL CRTV - " text="Visit “Ungdomsøen” - an island full og creativity" />
+        <Card img="/smk.webp" tag="LOCAL CRTV - " text="SMK offers a look at traditional danish paintings & more" />
+      </div>
+    </section>
   </body>
 
   <footer>
