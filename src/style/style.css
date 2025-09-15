@@ -38,6 +38,10 @@ h1 {
   line-height: 3rem;
   text-align: center;
 }
+
+h2 {
+  font-family: "Archivo Black", sans-serif;
+}
 .tag {
   color: rgb(0, 59, 115);
   font-weight: 800;
