@@ -10,22 +10,22 @@ import PageLayout from "../layouts.astro/PageLayout.astro";
     <section>
       <h1>EVENTS IN COPENHAGEN</h1>
       <div class="grid_1-2">
-        <div class="flex_one_column">
+        <Card variant="featured" img="video.mp4" tag="LOCAL CRTV - " text="WHAT CAN'T I MISS IN COPENHAGEN AS A FIRST-TIMER?" />
+        <div class="flex_one_column rev_order">
           <Card img="/christiania.webp" tag="LOCAL CRTV -" text="Discover Copenhagen's free town - colorful, creative, unforgettable." link="/tourguide" />
           <Card img="/BMO.webp" tag="LOCAL CRTV -" text="Taste, space and the joy of being together in copenhagen" link="/tourguide" />
           <Card img="/dak.webp" tag="LOCAL CRTV -" text="DAC: Where buildings and design tell their stories" link="/tourguide" />
         </div>
-        <Card variant="featured" img="video.mp4" tag="LOCAL CRTV - " text="WHAT CAN'T I MISS IN COPENHAGEN AS A FIRST-TIMER?" />
       </div>
     </section>
 
-    <section>
-      <p>FEATURED ARTICLES</p>
-      <h3>UNMISSABLE THINGS TO DO IN COPENHAGEN</h3>
+    <section class="tre_billeder">
+      <p class="tekst_billeder">FEATURED ARTICLES</p>
+      <h3 class="tekst_billeder">UNMISSABLE THINGS TO DO IN COPENHAGEN</h3>
       <div class="grid_1-1-1">
-        <Card img="/autopol.webp" tag="LOCAL CRTV - " text="AUTOPOL - outside bar in Nordvest" />
-        <Card img="/ungdom.webp" tag="LOCAL CRTV - " text="Visit “Ungdomsøen” - an island full og creativity" />
-        <Card img="/smk.webp" tag="LOCAL CRTV - " text="SMK offers a look at traditional danish paintings & more" />
+        <Card variant="yellowText" img="/autopol.webp" tag="LOCAL CRTV - " text="AUTOPOL - outside bar in Nordvest" />
+        <Card variant="yellowText" img="/ungdom.webp" tag="LOCAL CRTV - " text="Visit “Ungdomsøen” - an island full og creativity" />
+        <Card variant="yellowText" img="/smk.webp" tag="LOCAL CRTV - " text="SMK offers a look at traditional danish paintings & more" />
       </div>
     </section>
   </body>
