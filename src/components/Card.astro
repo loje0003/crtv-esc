@@ -9,10 +9,14 @@ const { variant, img, tag, text, link } = Astro.props;
 </article>
 
 <style>
-  img {
-    min-width: 100%;
+  .yellowText a,
+  .yellowText p {
+    color: rgba(246, 230, 156);
   }
 
+  article {
+    padding: 1rem 1.5rem;
+  }
   p {
     display: inline;
     line-height: 1.25rem;
@@ -29,6 +33,7 @@ const { variant, img, tag, text, link } = Astro.props;
 
   .featured img {
     margin-bottom: 0.5rem;
+    object-fit: cover;
   }
 
   .featured p {
