@@ -23,7 +23,6 @@ h3 {
 }
 .tofrom h1 {
   font-size: 1.3rem;
-  line-height: 1.5rem;
 }
 .underoverskrift {
   text-align: center;
@@ -37,6 +36,8 @@ h1 {
   font-size: 1.9rem;
   line-height: 3rem;
   text-align: center;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 h2 {
@@ -87,6 +88,13 @@ button {
   color: rgba(246, 230, 156);
   padding: 0.4rem 1.5rem;
   text-align: center;
+}
+
+.card {
+  padding: 30px;
+}
+.foto {
+  margin-bottom: 20px;
 }
 
 @media (min-width: 750px) {
