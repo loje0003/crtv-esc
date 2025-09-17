@@ -2,8 +2,21 @@
 const { variant, img, tag, text, link } = Astro.props;
 ---
 
-<article class={variant}>
+<!-- <article class={variant}>
   <img src={img} />
+  <p class="tag"><a href={link}>{tag}</a></p>
+  <p>{text}</p>
+</article> -->
+<article class={variant}>
+  {
+    variant === "featured" ? (
+      <video autoplay muted loop playsinline>
+        <source src={img} type="video/mp4" />
+      </video>
+    ) : (
+      <img src={img} alt="" />
+    )
+  }
   <p class="tag"><a href={link}>{tag}</a></p>
   <p>{text}</p>
 </article>
@@ -12,6 +25,13 @@ const { variant, img, tag, text, link } = Astro.props;
   .yellowText a,
   .yellowText p {
     color: rgba(246, 230, 156);
+  }
+
+  .featured video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
   }
 
   article {
