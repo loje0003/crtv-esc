@@ -2,59 +2,56 @@
 const { variant, img, tag, text, link } = Astro.props;
 ---
 
+<!-- <article class={variant}> <img src={img} /> <p class="tag"><a href={link}>{tag}</a></p> <p>{text}</p> </article> -->
 <article class={variant}>
-  {variant === "featured" ? <video src={img} autoplay muted loop playsinline preload="auto" poster="/still.webp" width="1200" height="800" /> : <img src={img} alt={text} width="600" height="400" loading="lazy" fetchpriority="low" />}
-
-  <p class="tag">
-    {link ? <a href={link}>Read more about {text}</a> : tag}
-  </p>
+  {
+    variant === "featured" ? (
+      <video autoplay muted loop playsinline preload="auto" poster="/still.webp" width="1200" height="800">
+        <source src={img} type="video/mp4" />
+      </video>
+    ) : (
+      <img src={img} alt="" />
+    )
+  }
+  <p class="tag"><a href={link}>{tag}</a></p>
   <p>{text}</p>
 </article>
-
 <style>
   .yellowText a,
   .yellowText p {
     color: rgba(246, 230, 156);
   }
-
   .featured video {
     width: 100%;
     height: auto;
     object-fit: cover;
     display: block;
   }
-
   article {
     padding: 1rem 1.5rem;
   }
-
   p {
     display: inline;
     line-height: 1.25rem;
   }
-
   .tag {
     text-decoration: underline;
     font-size: smaller;
     text-transform: uppercase;
   }
-
   .featured {
     text-transform: uppercase;
     text-align: center;
   }
-
   .featured img {
     margin-bottom: 0.5rem;
     object-fit: cover;
   }
-
   .featured p {
     display: block;
     line-height: 2rem;
     font-size: xx-large;
   }
-
   .featured .tag {
     text-decoration: underline;
     font-size: smaller;
